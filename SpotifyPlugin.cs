@@ -38,7 +38,7 @@ namespace Wox.Plugin.Spotify
             SingleResult("Pause", $"Pause: {_api.CurrentTrack.TrackResource.Name}", _api.Pause);
 
         private List<Result> PlayNext(string arg) =>
-            SingleResult("Next", $"Skip: {_api.CurrentTrack.TrackResource.Name}", _api.Skip);
+            SingleResult("Next", $"Skip: {_api.CurrentTrack.TrackResource.Name}", Send({MediaNextTrack}));
 
         private List<Result> GetPlaying()
         {
